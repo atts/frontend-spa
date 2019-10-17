@@ -1,0 +1,56 @@
+<div class="main-content">
+    <div class="loader" ng-show="!isLoaded">
+        <h5>Checking for last input value. Please wait ..</h5>
+        <img src='../assets/loader.gif'>
+    </div>
+    <table class="full-width" ng-show="isLoaded && isAdded">
+        <tr>
+            <td><label ng-class="{ 'inValid' : isFirstInValid, 'valid' : !isFirstInValid }">1<sup>st</sup> Number
+                    :</label></td>
+            <td> <input type="text" ng-change="validate(1)" ng-model="firstNum"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <h5>X</h5>
+            </td>
+        </tr>
+        <tr>
+            <td><label ng-class="{ 'inValid' : isSecondInValid  , 'valid' : !isSecondInValid  }">2<sup>nd</sup> Number
+                    :</label></td>
+            <td><input type="text" ng-change="validate(2)" ng-model="secondNum"></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td> <br></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><input type="button" value="Calculate" ng-disabled="!enableCalcButton()" ng-click='calculate()'></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td> <br></td>
+        </tr>
+        <tr>
+            <td>Result :&nbsp;</td>
+            <td> <input type="text" ng-model="result" ng-disabled="true"></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td> <br></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td> <br></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Reset" ng-click="reset()">&nbsp;<input type="button" value="Save" ng-disabled="!enableSaveButton()" ng-click="save()"></td>
+        </tr>
+    </table>
+    <div class="loader" ng-show="!isAdded">
+        <h5>Please wait while the inputs are added to Database..</h5>
+        <img src='../assets/loader.gif'>
+    </div>
+</div>

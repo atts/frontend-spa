@@ -1,0 +1,43 @@
+/* app css stylesheet */
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid #aaa;
+    margin-bottom: 1em;
+    padding: 0 0 1.5em;
+}
+
+.menu>li {
+    display: inline;
+    padding-left: 1rem !important;
+}
+
+.border {
+    height: 3.0rem !important;
+    background-color: #000;
+}
+
+.page-content {
+    min-height: 40rem !important;
+}
+
+.main-content {
+    position: absolute;
+    float: left;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inValid {
+    color: red;
+    font-weight: bold;
+}
+
+.valid {
+    text-decoration: none !important;
+}
+
+.full-width {
+    width: 150%;
+}
